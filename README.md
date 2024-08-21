@@ -1,4 +1,5 @@
-# skarva.github.io
+# skarva.tech
+
 Public website for skarva llc
 
-Nothing to do to run this, it is entirely a static content site
+Simple Hugo based site, nothing fancy

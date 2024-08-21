@@ -1,0 +1,188 @@
+@font-face {
+    font-family: skarva;
+    src: url(/Megrim.ttf);
+}
+
+:root {
+    --text: oklch(94.12% 0.026 290.74);
+    --background: oklch(7.30% 0.018 280.91);
+    --primary: oklch(43.96% 0.090 236.17);
+    --primary-dim: oklch(43.96% 0.090 236.17 / 20%);
+    --secondary: oklch(42.62% 0.080 32.41);
+    --secondary-dim: oklch(42.62% 0.080 32.41 / 10%);
+    --accent: oklch(68.57% 0.124 71.89);
+    font-family: 'Inter', sans-serif; 
+}
+
+@supports (font-variation-settings: normal) {
+  :root { font-family: 'Inter var', sans-serif; }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --text: oklch(7.30% 0.018 280.91);
+        --background: oklch(100% 0.006 290.74);
+        --primary: oklch(43.96% 0.090 236.17);
+        --primary-dim: oklch(43.96% 0.090 236.17);
+        --secondary: oklch(42.62% 0.080 32.41);
+        --secondary-dim: oklch(42.62% 0.080 32.41);
+        --accent: oklch(68.57% 0.124 71.89);
+    }
+
+    .listing {
+        color: var(--background);
+    }
+
+    .listing a {
+        color: var(--background);
+    }
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text: oklch(94.12% 0.026 290.74);
+        --background: oklch(7.30% 0.018 280.91);
+        --primary: oklch(43.96% 0.090 236.17);
+        --primary-dim: oklch(43.96% 0.090 236.17 / 20%);
+        --secondary: oklch(42.62% 0.080 32.41);
+        --secondary-dim: oklch(42.62% 0.080 32.41 / 10%);
+        --accent: oklch(68.57% 0.124 71.89);
+    }
+
+    .listing a {
+        color: var(--text);
+    }
+}
+
+body {
+    line-height: 1.5;
+    margin: auto;
+    max-width: 900px;
+    min-height: 100%;
+    background-color: var(--background);
+    color: var(--text);
+    font-size: 1.11em;
+}
+
+header {
+    margin-bottom: 10em;
+    text-align: center;
+}
+
+header > h1 {
+    font-family: skarva, sans-serif;
+    font-size: 4.2em;
+    background-color: var(--background);
+}
+
+nav > ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    align-items: stretch;
+}
+
+nav > ul > li {
+    height: 3em;
+    line-height: 3em;
+    padding: 0 2px;
+    flex-grow: 1;
+}
+
+nav > ul > li > a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    color: var(--text);
+    box-shadow: none;
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 2em;
+    transition: all 0.25s;
+}
+
+
+nav > ul > li > a:hover, nav > ul > li > a:focus {
+    box-shadow: 0 0 120px 0 var(--primary);
+    border: 1px solid var(--primary);
+}
+
+footer {
+    color: var(--secondary);
+    margin-top: 4em;
+}
+
+time {
+    font-weight: 800;
+    padding: 0 14px;
+}
+
+p {
+    padding: 0 14px;
+}
+
+p > a {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+p > a:hover, p > a:focus {
+    background: var(--accent);
+    color: oklch(7.30% 0.018 280.91);
+}
+
+
+main h1 {
+    border-left: 2px solid rgba(1, 1, 1, 0);
+    padding: 0 12px;
+    color: var(--text);
+}
+
+main h3 {
+    padding: 0 14px;
+    color: var(--secondary);
+}
+
+main h4 {
+    padding: 0 14px;
+}
+
+.listing {
+    padding: 12px;
+    border-radius: 0.5em;
+    background-color: var(--secondary-dim);
+}
+
+.listing:hover, .listing:focus-within {
+    background-color: var(--primary-dim);
+    box-shadow: 0 10px 40px -10px var(--primary);
+}
+
+.listing:hover h1, .listing:focus-within h1 {
+    border-left: 2px solid var(--accent);
+}
+
+.blog-post {
+    padding: 12px;
+    border-radius: 0.5em;
+    box-shadow: 0 10px 40px -10px var(--primary);
+    background-color: var(--background);
+}
+
+.blog-post > .title {
+    border-left: 2px solid var(--accent);
+}
+
+.blog-post > h1 {
+    color: var(--primary);
+}
+
+.project-type {
+    color: var(--secondary);
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.about {
+    padding: 12px;
+    border-radius: 0.5em;
+    box-shadow: 0 10px 40px -10px var(--accent);
+}

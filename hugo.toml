@@ -1,0 +1,28 @@
+baseURL = 'https://skarva.tech/'
+languageCode = 'en-us'
+title = 'S K Ä R V A'
+
+[[menus.main]]
+name = 'Blog'
+pageRef = '/'
+weight = 10
+
+[[menus.main]]
+name = 'Games'
+pageRef = '/games'
+weight = 20
+
+[[menus.main]]
+name = 'Apps'
+pageRef = '/apps'
+weight = 30
+
+[[menus.main]]
+name = 'About'
+pageRef = '/about'
+weight = 40
+
+[module]
+  [module.hugoVersion]
+    extended = false
+    min = "0.116.0"
