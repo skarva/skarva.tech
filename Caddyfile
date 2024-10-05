@@ -1,0 +1,12 @@
+{
+    auto_https off
+}
+
+http://skarva.tech {
+    root * /usr/share/caddy
+    file_server
+}
+
+http://skarva-tech.fly.dev {
+    redir https://skarva.tech/
+}
