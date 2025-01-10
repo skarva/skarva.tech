@@ -149,6 +149,7 @@ main h4 {
     padding: 12px;
     border-radius: 0.5em;
     background-color: var(--secondary-dim);
+    margin-bottom: 2rem;
 }
 
 .listing:hover, .listing:focus-within {
