@@ -1,6 +1,6 @@
 +++
 title = 'The Return'
-date = 2024-08-20T14:30:19-04:00
+date = 2024-09-20T14:30:19-04:00
 draft = false
 summary = 'A fresh look and intent'
 author = 'Ryan'
