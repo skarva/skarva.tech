@@ -1,5 +1,5 @@
 {{ define "main" }}
-  {{ range where site.RegularPages.ByPublishDate "Type" "blog" }}
+  {{ range where site.RegularPages.ByPublishDate.Reverse "Type" "blog" }}
     <div class="listing">
       <h1 class="title"><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h1>
       <p>{{ .Summary }}</p>

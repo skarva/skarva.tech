@@ -1,5 +1,9 @@
-FROM caddy:2.1.1
+FROM nginx:alpine
 
-COPY public /usr/share/caddy/
+COPY public /usr/share/nginx/html/
 
-COPY ./Caddyfile /etc/caddy/Caddyfile
+# Pass your nginx conf
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+# Forward ports
+EXPOSE 443
